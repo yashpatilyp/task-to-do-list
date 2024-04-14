@@ -77,13 +77,13 @@ export default function Task() {
     const sourceCardIndex = e.dataTransfer.getData("cardIndex");
 
     const updatedLists = lists.map((list, listIndex) => {
-      if (listIndex === sourceListIndex) {
+      if (listIndex == sourceListIndex) {
         const cardToMove = list.cards[sourceCardIndex];
         return {
           ...list,
-          cards: list.cards.filter((_, cardIndex) => cardIndex !== sourceCardIndex),
+          cards: list.cards.filter((_, cardIndex) => cardIndex != sourceCardIndex),
         };
-      } else if (listIndex === targetListIndex) {
+      } else if (listIndex == targetListIndex) {
         const cardToMove = lists[sourceListIndex].cards[sourceCardIndex];
         return {
           ...list,
