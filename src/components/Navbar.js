@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 
+                           //....pass board name in task 
 export default function Navbar({ addBoard }) {
   const [showModal, setShowModal] = useState(false);
   const [boardName, setBoardName] = useState("");
@@ -10,7 +11,7 @@ export default function Navbar({ addBoard }) {
     if (boardName.trim() !== "") {
       addBoard(boardName);
       setShowModal(false);
-      setBoardName(""); // Clear the board name after adding
+      setBoardName(""); 
     }
   };
 
@@ -26,12 +27,14 @@ export default function Navbar({ addBoard }) {
       </div>
 
       {/* Modal for entering board name */}
+    
       <Modal show={showModal} onHide={() => setShowModal(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Enter Board Name</Modal.Title>
+      <div className="model">
+        <Modal.Header closeButton >
+          <h4>Enter Board Name</h4>
         </Modal.Header>
         <Modal.Body>
-          <p>Enter the name of the new board:</p>
+          <h5>Enter the name of the new board:</h5>
           <input
             type="text"
             className="form-control"
@@ -40,14 +43,15 @@ export default function Navbar({ addBoard }) {
           />
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowModal(false)}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleAddBoard}>
+          
+          <Button  className="btn-navbar" onClick={handleAddBoard}>
             Add Board
           </Button>
         </Modal.Footer>
+        </div>
       </Modal>
+  
+      
     </nav>
   );
 }

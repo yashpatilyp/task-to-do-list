@@ -69,6 +69,9 @@
 .row{
   --bs-gutter-x: 0rem;
 }
+ .btn-close{
+  background-color: white;
+}
 /* //.......................................................................  */
 .task{
   padding: 20px 10px;
@@ -79,8 +82,15 @@ body{
 .card{
   background-color: rgb(35, 35, 61);
 }
+.model{
+  background-color: rgb(35, 35, 61);
+}
 h4{
+  color: rgb(255, 255, 255);
+}
+h5{
   color: white;
+  font-size: 15px;
 }
 .card-task span{
   font-weight: 500;
