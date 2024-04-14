@@ -1,6 +1,8 @@
 // Navbar.js
 import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
+import { FaRegStar } from "react-icons/fa";
+import { IoMdHome } from "react-icons/io";
 
                            //....pass board name in task 
 export default function Navbar({ addBoard }) {
@@ -18,7 +20,7 @@ export default function Navbar({ addBoard }) {
   return (
     <nav className="navbar navbar-light py-3">
       <div className="container-fluid">
-        <h1 className=" mb-0 h1">Task Management</h1>
+        <h1 className=" mb-0 h1 py-1 "><span className="mb-1"><IoMdHome style={{color:"blueviolet"}}/>    <FaRegStar/>  </span> Task Management</h1>
         <div className="d-flex">
           <button className="formcontrol btn-navbar" onClick={() => setShowModal(true)}>
             Create New Board

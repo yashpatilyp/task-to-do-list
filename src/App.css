@@ -33,6 +33,10 @@
 .card{
   
 }
+.navbar svg{
+  margin-bottom: 10px;
+  color: yellow;
+}
 .navbar{
   background-color: rgb(35, 35, 61);
 }
@@ -120,6 +124,16 @@ small{
 .card-task.hover-red:hover {
   background-color: red;
 }
+
+@media (max-width: 500px) {
+  .navbar h1 {
+    font-size: 22px;
+  }
+  svg{
+    margin-bottom: 0px;
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
